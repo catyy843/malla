@@ -81,7 +81,16 @@ const courseElements = document.querySelectorAll('li[data-course]');
 const STORAGE_KEY = 'mallaUnlockedCourses';
 
 // Cargar cursos desbloqueados desde localStorage o iniciar con los del primer semestre desbloqueados
-let unlockedCourses = JSON.parse(localStorage.getItem(STORAGE_KEY)) || ['Fundamentos de Enfermería I', 'Química General y Orgánica', 'Biología Celular y Genética', 'Matemáticas', 'Física', 'Ciencias Sociales y Salud I', 'Educación en Salud I', 'Inglés I'];
+let unlockedCourses = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [
+  'Fundamentos de Enfermería I',
+  'Química General y Orgánica',
+  'Biología Celular y Genética',
+  'Matemáticas',
+  'Física',
+  'Ciencias Sociales y Salud I',
+  'Educación en Salud I',
+  'Inglés I'
+];
 
 // Función para actualizar la visualización (clases desbloqueadas)
 function updateCourses() {
