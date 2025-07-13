@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+body {
+  font-family: 'Amatic SC', cursive;
+  background-color: #EFD4C4;
+  margin: 20px;
+  color: #4E0714;
+}
+
+h1 {
+  text-align: center;
+  color: #781727;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-shadow: 0 0 15px rgba(78, 7, 20, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 2px solid #AC5B67;
+  padding: 10px;
+  vertical-align: top;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #E283C2;
+  color: white;
+  font-size: 1.5rem;
+  border-bottom: 4px solid #781727;
+  text-shadow: 1px 1px 2px #4E0714;
+}
+
+td {
+  background-color: #FBECEC;
+  color: #4E0714;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: square;
+  margin: 0;
+}
+
+td li {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background-color: #EFD4C4;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 1px 1px 4px rgba(120, 23, 39, 0.3);
+  transition: all 0.3s ease;
+}
+
+td li:hover {
+  background-color: #781727;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 2px 2px 8px rgba(120, 23, 39, 0.6);
+}
+
+td li.unlocked {
+  background-color: #781727;
+  color: white;
+  font-weight: 700;
+  cursor: default;
+  box-shadow: 2px 2px 8px rgba(120, 23, 39, 0.8);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Colores suaves por columna (semestre) */
+table td:nth-child(1) { background-color: #FDE9E9; }
+table td:nth-child(2) { background-color: #F8DFDF; }
+table td:nth-child(3) { background-color: #F4D6D6; }
+table td:nth-child(4) { background-color: #F0CCCC; }
+table td:nth-child(5) { background-color: #EBC2C2; }
+table td:nth-child(6) { background-color: #E7B8B8; }
+table td:nth-child(7) { background-color: #E3AEAE; }
+table td:nth-child(8) { background-color: #DEA4A4; }
+table td:nth-child(9) { background-color: #DA9A9A; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    background: #781727;
+    color: white;
+  }
+
+  td {
+    border: none;
+    margin-bottom: 20px;
+  }
+}
